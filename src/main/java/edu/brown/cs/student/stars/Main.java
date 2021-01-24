@@ -57,6 +57,9 @@ public final class Main {
     }
 
     // TODO: Process commands in a REPL
+    Repl repl = new StarsRepl();
+    repl.run();
+
   }
 
   private static FreeMarkerEngine createEngine() {
