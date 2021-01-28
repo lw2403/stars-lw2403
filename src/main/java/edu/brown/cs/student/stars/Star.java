@@ -1,5 +1,7 @@
 package edu.brown.cs.student.stars;
 
+import java.util.Objects;
+
 /**
  * star entity
  */
@@ -16,6 +18,21 @@ public class Star {
     }
 
     public Star() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Star star = (Star) o;
+        return Objects.equals(starID, star.starID) &&
+                Objects.equals(properName, star.properName) &&
+                Objects.equals(point, star.point);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(starID, properName, point);
     }
 
     public Integer getStarID() {

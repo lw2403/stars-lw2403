@@ -54,11 +54,11 @@ public class StarsRepl extends Repl{
                 result= searchCenter.naiveNeighbors(n,p);
             }else if(args.length==2){
                 int n = Integer.parseInt(args[0]);
-                String name = args[1].substring(1,args[1].length()-1);
+                String name = args[1];//.substring(1,args[1].length()-1);
                 result = searchCenter.naiveNeighbors(n,name);
             }
             if(result.size()==0){
-                System.out.println("single star!");
+                //System.out.println("single star!");
             }
             for (Star star : result) {
                 System.out.println(star.getStarID());
@@ -90,7 +90,7 @@ public class StarsRepl extends Repl{
                 );
                 result= searchCenter.naiveRadius(r,p);
             }else if(args.length==2){
-                String name = args[1].substring(1,args[1].length()-1);
+                String name = args[1];//.substring(1,args[1].length()-1);
                 result = searchCenter.naiveRadius(r,name);
             }
             if(result.size()==0){
