@@ -140,6 +140,7 @@ public class StarsRepl extends Repl{
     };
 
     public StarsRepl() {
+        super();
         registAction("stars",starsAction);
         registAction("naive_neighbors",naiveNeighborsAction);
         registAction("naive_radius",naiveRadiusAction);
